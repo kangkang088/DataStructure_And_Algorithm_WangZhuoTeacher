@@ -76,26 +76,26 @@
 逻辑结构分为四种类型：集合结构，线性结构，树形结构，图形结构。
 
 集合结构：数据元素同属一个集合，单个数据元素之间没有任何关系。
-![](https://img-blog.csdnimg.cn/20201108152252689.png#pic_center)
+![](1.assets/0213.png)
 
 
 
 线性结构：类似于线性关系，线性结构中的数据元素之间是一对一的关系。
 
 
-![\]](https://img-blog.csdnimg.cn/20201108152305210.png#pic_center)
+![\]](1.assets/5245.png)
 
 
 
 树形结构：树形结构中的数据元素之间存在一对多的关系。（各元素及元素关系所组成图形类似于树状图）。
 
-![\]](https://img-blog.csdnimg.cn/20201108152317754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\]](1.assets/1561.png)
 
 
 
 图形结构：数据元素之间是多对多的关系。如下图所示。
 
-![\]](https://img-blog.csdnimg.cn/20201108152332114.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\]](1.assets/474.png)
 
 &nbsp;
 
@@ -110,7 +110,7 @@
 
 顺序存储结构是把数据元素放到地址**连续的存储单元**里面，其**数据间的逻辑关系和物理关系**是一致的。之前学习的数组就是一种顺序存储结构。（如图所示）
 
-![\]](https://img-blog.csdnimg.cn/20201108152347937.png#pic_center)
+![\]](1.assets/20201108152347937.png)
 
 
 &nbsp;
@@ -267,20 +267,20 @@ int []m = new int[n];
 
 ## 第一章总结
 
-![\[]](https://img-blog.csdnimg.cn/20201108152448527.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\[]](1.assets/564564564.png)
 
 &nbsp;
 
 数据，数据对象和数据元素、数据项的关系如下
 
-![](https://img-blog.csdnimg.cn/202011081525424.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![](1.assets/654884.png)
 
 
 &nbsp;
 
 **数据结构是相互之间存在一种或者多种特定关系的数据元素的集合**。同样是结构，从不同角度来讨论，会有不同的分类，如图所示：
 
-![](https://img-blog.csdnimg.cn/2020110815255868.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![](1.assets/545613.png)
 
 
 &nbsp;
@@ -344,7 +344,7 @@ int []m = new int[n];
 > &nbsp;
 > 其中树结构和图结构都属于非线性结构。
 >
-> ![](https://img-blog.csdnimg.cn/20201108152618939.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+> ![](1.assets/dq)
 
 
 
@@ -624,7 +624,7 @@ y = 0;
 
 假设线性表 L 存储的起始位置为 LOC(A) ，sizeof(ElemType) 是每个数据元素所占用存储空间的大小，则表 L 所对应的顺序存储如下图：
 
-![](https://img-blog.csdnimg.cn/20201108152719167.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![](1.assets/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70)
 
 
 ==注意：线性表中的位序是从 1 开始的，而数组中元素的下标是从 0 开始的==
@@ -798,7 +798,7 @@ int LocateELem(SqList L, ElemType e) {
 
 在第 i 个位置插入一个元素时，需从最后一个元素即第 n 个元素开始，依次向后移动一个位置，直至第 i 个元素。
 
-![](https://img-blog.csdnimg.cn/20201108152742279.png#pic_center)
+![](1.assets/20201108152742279.png)
 
 
 &nbsp;
@@ -835,15 +835,15 @@ Status Listinsert(SqList &L, int i, ElemType e) {
 
 **五、顺序表删除元素**
 
+![image-20250908174156987](1.assets/image-20250908174156987.png)
 
+![image-20250908174404299](1.assets/image-20250908174404299.png)
 
-
-
-
+![image-20250908174936624](1.assets/image-20250908174936624.png)
 
 删除第 i 个元素时需将第 i+ 1 个至第 n 个元素依次向前移动一个位置 (i = n 时无需移动）
 
-![](https://img-blog.csdnimg.cn/20201108152800810.png#pic_center)
+![](1.assets/20201108152800810.png)
 
 
 &nbsp;
@@ -870,13 +870,63 @@ Status ListDelete(SqList &L, int i) {
 
 顺序表删除算法的平均时间复杂度为 O(n)
 
+### 2.4.3、小结
+
+![image-20250908175557120](1.assets/image-20250908175557120.png)
+
+![image-20250908175638472](1.assets/image-20250908175638472.png)
+
+![image-20250908175742005](1.assets/image-20250908175742005.png)
+
+
+
 ## 2.5、线性表的链式表示和实现
+
+![image-20250909092043406](1.assets/image-20250909092043406.png)
+
+![image-20250909092136045](1.assets/image-20250909092136045.png)
+
+![image-20250909095507166](1.assets/image-20250909095507166.png)
+
+![image-20250909095714471](1.assets/image-20250909095714471.png)
+
+![image-20250909102108910](1.assets/image-20250909102108910.png)
+
+![image-20250909102313962](1.assets/image-20250909102313962.png)
+
+![image-20250909102538126](1.assets/image-20250909102538126.png)
+
+![image-20250909102719395](1.assets/image-20250909102719395.png)
+
+![image-20250909102826021](1.assets/image-20250909102826021.png)
+
+![image-20250909103022016](1.assets/image-20250909103022016.png)
+
+![image-20250909103201859](1.assets/image-20250909103201859.png)
+
+![image-20250909104133683](1.assets/image-20250909104133683.png)
+
+![image-20250909104251473](1.assets/image-20250909104251473.png)
+
+![image-20250909104445630](1.assets/image-20250909104445630.png)
 
 链式存储结构的特点：用一组任意的存储单元存储线性表的数据元素（这组存储单元可以是连续的，也可以是不连续的），存放数据元素的结点至少包括两个域（指针域、数据域），也可以包含若干个指针域和数据域。
 
 ### 2.5.1、单链表的定义和表示
 
-![](https://img-blog.csdnimg.cn/2020110815281612.png#pic_center)
+![image-20250909104758780](1.assets/image-20250909104758780.png)
+
+![image-20250909112627173](1.assets/image-20250909112627173.png)
+
+**Lnode* p，或者LinkList p。都表示p是一个指向Lnode的指针。**
+
+![image-20250909112922670](1.assets/image-20250909112922670.png)
+
+指向头结点的指针，通常代表了整个链表。
+
+![image-20250909113437508](1.assets/image-20250909113437508.png)
+
+![](1.assets/2020110815281612.png)
 
 
 关于带头结点的单链表及不带头节点的单链表
@@ -887,7 +937,7 @@ Status ListDelete(SqList &L, int i) {
 
 带头结点：
 
-![](https://img-blog.csdnimg.cn/20201108152827998.png#pic_center)
+![](1.assets/20201108152827998.png)
 
 
 不带头结点：
@@ -909,6 +959,18 @@ Status ListDelete(SqList &L, int i) {
 ```
 
 ### 2.5.2、单链表基本操作的实现
+
+![image-20250909114120363](1.assets/image-20250909114120363.png)
+
+![image-20250909114152336](1.assets/image-20250909114152336.png)
+
+![image-20250909114502462](1.assets/image-20250909114502462.png)
+
+![image-20250909114550752](1.assets/image-20250909114550752.png)
+
+
+
+
 
 **一、单链表的初始化**
 
@@ -976,7 +1038,7 @@ Status ListDelete(SqList &L, int i) {
 
 **四、单链表的插入**
 
-![](https://img-blog.csdnimg.cn/20201108152905850.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![](1.assets/021321.png)
 
 
 将值为e的新结点插入到表的第 i 个结点的位置上，即插入到结点 a~i-1~与a~i~之间。
@@ -1018,7 +1080,7 @@ Status ListDelete(SqList &L, int i) {
 
 **五、单链表的删除**
 
-![](https://img-blog.csdnimg.cn/20201108152921640.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![](1.assets/10564.png)
 
 
 删除单链表的第 i 个结点a~i~ 
@@ -1054,15 +1116,15 @@ Status ListDelete(SqList &L, int i) {
 
 前插法：始终让新结点在第一的位置，不常用，因为输入顺序和输出顺序是相反的。
 
-![](https://img-blog.csdnimg.cn/20201108152940148.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![](1.assets/056465.png)
 
 
-![](https://img-blog.csdnimg.cn/20201108153049447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![](1.assets/5456456.png)
 
 
 后插法：尾指针r始终指向单链表的表尾，常用（输入顺序和输出顺序相同）
 
-![](https://img-blog.csdnimg.cn/20201108153113364.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![](1.assets/48646.png)
 
 &nbsp;
 
@@ -1077,41 +1139,41 @@ Status ListDelete(SqList &L, int i) {
 - 将新结点*p 插入到尾结点*r之后；
 - 尾指针r指向新的尾结点*p
 
-![](https://img-blog.csdnimg.cn/20201108153143221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![](1.assets/879878.png)
 
 
 ### 2.5.3、循环链表
 
-![](https://img-blog.csdnimg.cn/20201108153201494.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![](1.assets/5874864.png)
 
 
 ### 2.5.4、双向链表
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7V3NMvM9-1604820044587)(images/image-20201107172010911.png)\]](https://img-blog.csdnimg.cn/20201108153217716.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7V3NMvM9-1604820044587)(images/image-20201107172010911.png)\]](1.assets/857684.png)
 &nbsp;
 
-![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-2NfrmPru-1604820044587)(images/image-20201107200016679.png)\]](https://img-blog.csdnimg.cn/20201108153229693.png#pic_center)
+![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-2NfrmPru-1604820044587)(images/image-20201107200016679.png)\]](1.assets/654564654.png)
 
 
 双向链表的插入：
 
-![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rB7Kp94d-1604820044588)(images/image-20201107172155836.png)\]](https://img-blog.csdnimg.cn/2020110815341382.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rB7Kp94d-1604820044588)(images/image-20201107172155836.png)\]](1.assets/9898.png)
 
 
-![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-WJxae4N5-1604820044589)(images/image-20201107200049373.png)\]](https://img-blog.csdnimg.cn/20201108153426649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-WJxae4N5-1604820044589)(images/image-20201107200049373.png)\]](1.assets/9648548.png)
 
 
 双向链表的删除：
 
-![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Chg7otR0-1604820044589)(images/20181104205353433.png)\]](https://img-blog.csdnimg.cn/20201108153441826.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Chg7otR0-1604820044589)(images/20181104205353433.png)\]](1.assets/984211.png)
 
 
-![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-9bYWgMhB-1604820044590)(images/image-20201107200103616.png)\]](https://img-blog.csdnimg.cn/20201108153456591.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-9bYWgMhB-1604820044590)(images/image-20201107200103616.png)\]](1.assets/87486.png)
 
 
 ## 2.6、顺序表和链表的比较
 
-![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-oBREpUd1-1604820044590)(images/image-20201107172911991.png)\]](https://img-blog.csdnimg.cn/20201108153521435.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-oBREpUd1-1604820044590)(images/image-20201107172911991.png)\]](1.assets/931.png)
 
 
 ## 2.7、线性表的应用
@@ -1125,19 +1187,19 @@ Status ListDelete(SqList &L, int i) {
 
 ## 第二章小结
 
-![\ 转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-w7VKU2t7-1604820044591)(images/20161021192553027.png)\]](https://img-blog.csdnimg.cn/20201108153543336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-w7VKU2t7-1604820044591)(images/20161021192553027.png)\]](1.assets/96899898.png)
 
 
 &nbsp;
 
-![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rjbBfzjt-1604820044592)(images/image-20201107172911991.png)\]](https://img-blog.csdnimg.cn/20201108153558343.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![image-20250909105908702](1.assets/image-20250909105908702.png)
 
 
 &nbsp;
 
 &nbsp;
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ffAH9dH0-1604820044593)(images/image-20201107175631378.png)\]](https://img-blog.csdnimg.cn/20201108153613583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ffAH9dH0-1604820044593)(images/image-20201107175631378.png)\]](1.assets/05648645.png)
 
 
 ## 第二章习题
