@@ -610,7 +610,7 @@ y = 0;
 
 ## 2.4、线性表的顺序表示和实现
 
-### 2.4.1、线性表的顺序表示(额外：数组的静态分配和动态分配，引用和指针的区别)
+### 2.4.1、线性表的顺序表示
 
 ![image-20250904153220907](1.assets/image-20250904153220907.png)
 
@@ -637,7 +637,7 @@ y = 0;
 
 &nbsp;
 
-由于线性表的长度可变，且所需最大存储空间随问题的不同而不同，在C语言中通常使用**动态分配的一维数组**表示线性表
+**由于线性表的长度可变，且所需最大存储空间随问题的不同而不同，在C语言中通常使用 动态分配 的一维数组表示线性表**
 
 ```c
 //－－－－－ 顺序表的存储结构－－－－－
@@ -653,6 +653,10 @@ y = 0;
 ![image-20250905111516123](1.assets/image-20250905111516123.png)
 
 #### 2.4.1.1 数组的动态分配和静态分配
+
+**注意：动态分配无非就是在存储空间不足时可以在运行时再分配，但是顺序表依然存在浪费空间的问题，因为动态分配初始化时，也要预分配一些空间，这些空间为了能够存储全部数据，往往是大于实际数据的所占空间的。**
+
+
 
 ![image-20250904162258315](1.assets/image-20250904162258315.png)
 
@@ -1273,18 +1277,59 @@ Status ListDelete(SqList &L, int i) {
 
 ![image-20250915092857703](1.assets/image-20250915092857703.png)
 
+![image-20250915093555892](1.assets/image-20250915093555892.png)
 
+![image-20250915093439249](1.assets/image-20250915093439249.png)
 
 ![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-oBREpUd1-1604820044590)(images/image-20201107172911991.png)\]](1.assets/931.png)
 
-
 ## 2.7、线性表的应用
 
+![image-20250915100509678](1.assets/image-20250915100509678.png)
+
+#### 2.7.1 线性表的合并
+
+![image-20250915100653229](1.assets/image-20250915100653229.png)
+
+![image-20250915101502271](1.assets/image-20250915101502271.png)
+
+#### 2.7.2 有序表的合并
 
 
 
+![image-20250915103543489](1.assets/image-20250915103543489.png)
+
+##### 2.7.2.1 顺序表实现
+
+![image-20250915104012970](1.assets/image-20250915104012970.png)
+
+![image-20250915104039723](1.assets/image-20250915104039723.png)
+
+![image-20250915105153408](1.assets/image-20250915105153408.png)
+
+**时间复杂度：不存在最好最坏的情况。假设a先比较完了，过程中b中用了x个，那么时间复杂度就是Len(a) + x + Len(b) - x = Len(a) + Len(b)。**
 
 
+
+##### 2.7.2.2 链表实现
+
+![image-20250915105410086](1.assets/image-20250915105410086.png)
+
+![image-20250915105518954](1.assets/image-20250915105518954.png)
+
+![image-20250915105633011](1.assets/image-20250915105633011.png)
+
+![image-20250915105722816](1.assets/image-20250915105722816.png)
+
+![image-20250915110038919](1.assets/image-20250915110038919.png)
+
+![image-20250915110114302](1.assets/image-20250915110114302.png)
+
+![image-20250915110702671](1.assets/image-20250915110702671.png)
+
+**时间复杂度：存在最好最坏的情况。最好情况：假设a先比较完了，且过程中b中用了x个，x = 0。那么时间复杂度就是Len(a) + x = Len(a) 。最坏情况：x = Len(b)。**
+
+空间复杂度：O(1)
 
 
 
@@ -1292,6 +1337,44 @@ Status ListDelete(SqList &L, int i) {
 
 线性表的顺序实现案例：[顺序表案例](https://blog.csdn.net/chongyang_/article/details/109557874)
 线性表的链式实现案例：[单链表案例](https://blog.csdn.net/chongyang_/article/details/109002378)
+
+### 2.8.1 一元多项式
+
+![image-20250915131707762](1.assets/image-20250915131707762.png)
+
+![image-20250915132400584](1.assets/image-20250915132400584.png)
+
+
+
+### 2.8.2 稀疏多项式
+
+![image-20250915132721568](1.assets/image-20250915132721568.png)
+
+![image-20250915133013559](1.assets/image-20250915133013559.png)
+
+![image-20250915133241573](1.assets/image-20250915133241573.png)
+
+![image-20250915133659969](1.assets/image-20250915133659969.png)
+
+![image-20250915133754399](1.assets/image-20250915133754399.png)
+
+![image-20250915133735183](1.assets/image-20250915133735183.png)
+
+![image-20250915134231432](1.assets/image-20250915134231432.png)
+
+![image-20250915134302627](1.assets/image-20250915134302627.png)
+
+![image-20250915134933437](1.assets/image-20250915134933437.png)
+
+### 2.8.3 图书信息管理系统
+
+![image-20250915135412420](1.assets/image-20250915135412420.png)
+
+![image-20250915135553105](1.assets/image-20250915135553105.png)
+
+![image-20250915135724959](1.assets/image-20250915135724959.png)
+
+
 
 ## 第二章小结
 
@@ -1476,7 +1559,41 @@ D．q->prior=p; q->next=p->next; p->next=q; p->next->prior=q;
 
 ## 3.1、栈和队列的定义和特点
 
+![image-20250915140604527](1.assets/image-20250915140604527.png)
+
+![image-20250915141938700](1.assets/image-20250915141938700.png)
+
+![image-20250915140746604](1.assets/image-20250915140746604.png)
+
+![image-20250915141016549](1.assets/image-20250915141016549.png)
+
+![image-20250915141301961](1.assets/image-20250915141301961.png)
+
+![image-20250915141244729](1.assets/image-20250915141244729.png)
+
+
+
 ### 3.1.1、栈的定义和特点
+
+![image-20250915142830732](1.assets/image-20250915142830732.png)
+
+![image-20250915143013795](1.assets/image-20250915143013795.png)
+
+![image-20250915143153505](1.assets/image-20250915143153505.png)
+
+![image-20250915143202682](1.assets/image-20250915143202682.png)
+
+![image-20250915143300267](1.assets/image-20250915143300267.png)
+
+![image-20250915143349063](1.assets/image-20250915143349063.png)
+
+![image-20250915143836750](1.assets/image-20250915143836750.png)
+
+![image-20250915144018497](1.assets/image-20250915144018497.png)
+
+![image-20250915144040887](1.assets/image-20250915144040887.png)
+
+
 
 - 栈：受约束的线性表，只允许栈顶元素入栈和出栈
 
@@ -1484,32 +1601,79 @@ D．q->prior=p; q->next=p->next; p->next=q; p->next->prior=q;
 
 - 先进后出，后进先出
 
-  ![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-vyaQBa5N-1604820044594)(images/image-20201108105459863.png)\]](https://img-blog.csdnimg.cn/20201108153634993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
-
+  ![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-vyaQBa5N-1604820044594)(images/image-20201108105459863.png)\]](1.assets/wqeq.png)
 
 ### 3.1.2、队列的定义和特点
+
+![image-20250915161748739](1.assets/image-20250915161748739.png)
+
+![image-20250915161909000](1.assets/image-20250915161909000.png)
+
+
 
 - 队列：受约束的线性表，只允许在队尾插入，在队头删除
 - 先进先出，后进后出
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-oXClEWr4-1604820044596)(images/image-20201107211526109.png)\]](https://img-blog.csdnimg.cn/2020110815364898.png#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-oXClEWr4-1604820044596)(images/image-20201107211526109.png)\]](1.assets/2020110815364898.png)
 
 
 
 
 ## 3.2、案例引入
 
-略
+![image-20250915161937000](1.assets/image-20250915161937000.png)
+
+### 3.2.1 进制转换
+
+![image-20250915163553568](1.assets/image-20250915163553568.png)
+
+![image-20250915164757656](1.assets/image-20250915164757656.png)
+
+### 3.2.2 括号匹配检测
+
+![image-20250915170401307](1.assets/image-20250915170401307.png)
+
+### 3.2.3 表达式求值
+
+![image-20250916095423251](1.assets/image-20250916095423251.png)
+
+![image-20250916095616090](1.assets/image-20250916095616090.png)
+
+![image-20250916100019091](1.assets/image-20250916100019091.png)
+
+### 3.2.4 舞伴问题
+
+![image-20250916100614834](1.assets/image-20250916100614834.png)
+
+
 
 ## 3.3、栈的表示和操作的实现
 
 ### 3.3.1、栈的类型定义
 
+![image-20250916101023971](1.assets/image-20250916101023971.png)
+
+![image-20250916101422099](1.assets/image-20250916101422099.png)
+
+![image-20250916103206349](1.assets/image-20250916103206349.png)
+
 栈也有两种存储表示方法，分别称为顺序栈和链栈。
 
 ### 3.3.2、顺序栈的表示和实现
 
-顺序栈的存储结构
+#### 3.3.2.1 顺序栈的存储结构
+
+![image-20250916103617546](1.assets/image-20250916103617546.png)
+
+![image-20250916104623541](1.assets/image-20250916104623541.png)
+
+![image-20250916104803388](1.assets/image-20250916104803388.png)
+
+![image-20250916133332440](1.assets/image-20250916133332440.png)
+
+![image-20250916133400042](1.assets/image-20250916133400042.png)
+
+
 
 ```c
 //－－－－－ 顺序栈的存储结构－ －－－－
@@ -1533,85 +1697,198 @@ typedef struct{
 
 
 
-**一、 顺序栈的初始化**
+#### 3.3.2.2  顺序栈的初始化
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-AICCR1eP-1604820044597)(images/image-20201107202759675.png)\]](https://img-blog.csdnimg.cn/2020110815371368.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![image-20250916134540745](1.assets/image-20250916134540745.png)
 
 
-**二、顺序栈的入栈**：
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-2iLnDfzN-1604820044598)(images/image-20201107184617878.png)\]](https://img-blog.csdnimg.cn/20201108153726245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-AICCR1eP-1604820044597)(images/image-20201107202759675.png)\]](1.assets/wqedsa.png)
+
+#### 顺序栈操作补充
+
+![image-20250916134649607](1.assets/image-20250916134649607.png)
+
+![image-20250916134728909](1.assets/image-20250916134728909.png)
+
+![image-20250916134812180](1.assets/image-20250916134812180.png)
+
+![image-20250916135101179](1.assets/image-20250916135101179.png)
+
+
+
+#### 3.3.2.3 顺序栈的入栈
+
+![image-20250916141410609](1.assets/image-20250916141410609.png)
+
+
+
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-2iLnDfzN-1604820044598)(images/image-20201107184617878.png)\]](1.assets/sqq.png)
 
 
 &nbsp;
 
-![  图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-P5oPi7Ng-1604820044599)(images/image-20201107204837805.png)\]](https://img-blog.csdnimg.cn/20201108153742992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![  图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-P5oPi7Ng-1604820044599)(images/image-20201107204837805.png)\]](1.assets/wqq56.png)
+
+#### 3.3.2.4 顺序栈的出栈
+
+![image-20250916142044305](1.assets/image-20250916142044305.png)
 
 
-**三、顺序栈的出栈**：
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-uwrWDCna-1604820044600)(images/image-20201107184707623.png)\]](https://img-blog.csdnimg.cn/2020110815375898.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-uwrWDCna-1604820044600)(images/image-20201107184707623.png)\]](1.assets/csa6.png)
 
 
 &nbsp;
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-nPl8q3RY-1604820044601)(images/image-20201107204903992.png)\]](https://img-blog.csdnimg.cn/20201108153810425.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-nPl8q3RY-1604820044601)(images/image-20201107204903992.png)\]](1.assets/xz3s.png)
 
+#### 3.3.2.5 顺序栈取栈顶元素
 
-**四、顺序栈取栈顶元素**：
-
-![  图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ACdhQwB2-1604820044601)(images/image-20201107204935694.png)\]](https://img-blog.csdnimg.cn/20201108153838812.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
-
+![  图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ACdhQwB2-1604820044601)(images/image-20201107204935694.png)\]](1.assets/56456.png)
 
 ### 3.3.3、链栈的表示和实现
 
+#### 3.3.3.1 链栈的存储结构
+
+![image-20250916150304970](1.assets/image-20250916150304970.png)
+
+**链栈中的链表是反向的，无头结点，栈顶一直指向链表的最后一个元素：正常链表增加结点时，比如a，要增加b，应该是a->next = b。**
+
+**但链栈中的链表，应该是b->next = a。**
+
 链栈示意图：
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-AJZHGucx-1604820044602)(images/image-20201107205550932.png)\]](https://img-blog.csdnimg.cn/20201108153853773.png#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-AJZHGucx-1604820044602)(images/image-20201107205550932.png)\]](1.assets/qweq56.png)
 
 
 链栈的存储结构：
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-6OW6d1e1-1604820044603)(images/image-20201107205330323.png)\]](https://img-blog.csdnimg.cn/20201108153908213.png#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-6OW6d1e1-1604820044603)(images/image-20201107205330323.png)\]](1.assets/7887.png)
+
+#### 3.3.3.2 链栈的初始化
+
+![image-20250916151212848](1.assets/image-20250916151212848.png)
 
 
-**一、链栈的初始化**
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-szBpHIfH-1604820044603)(images/image-20201107205619878.png)\]](https://img-blog.csdnimg.cn/20201108153923298.png#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-szBpHIfH-1604820044603)(images/image-20201107205619878.png)\]](1.assets/qweq.png)
 
+#### 算法补充
 
-**二、链栈的入栈**
-
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-8m8HH8hB-1604820044604)(images/20191219202437412.gif)\]](https://img-blog.csdnimg.cn/20201108153950564.gif#pic_center)
+![image-20250916151235094](1.assets/image-20250916151235094.png)
 
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-xw22y6tO-1604820044605)(images/image-20201107205728858.png)\]](https://img-blog.csdnimg.cn/20201108154008858.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+
+#### 3.3.3.3 链栈的入栈
+
+![image-20250916151653885](1.assets/image-20250916151653885.png)
 
 
-**三、链栈的出栈**
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-G69mqZeM-1604820044605)(images/20191219202612665.gif)\]](https://img-blog.csdnimg.cn/20201108154052343.gif#pic_center)
-
-
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-TqWEy5l1-1604820044606)(images/image-20201107205820598.png)\]](https://img-blog.csdnimg.cn/20201108154111979.png#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-8m8HH8hB-1604820044604)(images/20191219202437412.gif)\]](1.assets/20201108153950564.gif)
 
 
-**四、链栈取栈顶元素**
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-xw22y6tO-1604820044605)(images/image-20201107205728858.png)\]](1.assets/wqewqe.png)
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-baje5i4m-1604820044606)(images/image-20201107205847613.png)\]](https://img-blog.csdnimg.cn/20201108154200824.png#pic_center)
+#### 3.3.3.4 链栈的出栈
 
+![image-20250916151909207](1.assets/image-20250916151909207.png)
+
+
+
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-G69mqZeM-1604820044605)(images/20191219202612665.gif)\]](1.assets/20201108154052343.gif)
+
+
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-TqWEy5l1-1604820044606)(images/image-20201107205820598.png)\]](1.assets/154.png)
+
+#### 3.3.3.5 链栈取栈顶元素
+
+![image-20250916154137143](1.assets/image-20250916154137143.png)
+
+
+
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-baje5i4m-1604820044606)(images/image-20201107205847613.png)\]](1.assets/989564.png)
 
 ## 3.4、栈与递归
 
-栈与递归知识点看小结思维导图
+### 3.4.1 递归的定义
+
+![image-20250916154544727](1.assets/image-20250916154544727.png)
+
+### 3.4.2 递归示例
+
+![image-20250916154636775](1.assets/image-20250916154636775.png)
+
+![image-20250916154711101](1.assets/image-20250916154711101.png)
+
+![image-20250916154747740](1.assets/image-20250916154747740.png)
+
+![image-20250916154851173](1.assets/image-20250916154851173.png)
+
+### 3.4.3 递归求解
+
+![image-20250916155341921](1.assets/image-20250916155341921.png)
+
+![image-20250916155627796](1.assets/image-20250916155627796.png)
+
+### 3.4.4 递归与函数调用
+
+![image-20250916160016367](1.assets/image-20250916160016367.png)
+
+![image-20250916160631365](1.assets/image-20250916160631365.png)
+
+![image-20250916161007030](1.assets/image-20250916161007030.png)
+
+![image-20250916161222733](1.assets/image-20250916161222733.png)
+
+![image-20250916161506124](1.assets/image-20250916161506124.png)
+
+![image-20250916161701031](1.assets/image-20250916161701031.png)
+
+![image-20250916161733159](1.assets/image-20250916161733159.png)
+
+![image-20250916161825114](1.assets/image-20250916161825114.png)
+
+![image-20250916161840008](1.assets/image-20250916161840008.png)
+
+![image-20250916162200707](1.assets/image-20250916162200707.png)
+
+![image-20250916161934396](1.assets/image-20250916161934396.png)
+
+
 
 ## 3.5、队列的表示和操作的实现
 
-### 3.5.1、队列的类型定义
+### 知识回顾
 
 队列的操作与栈类似，不同的是，删除时在表的头部(即队头)进行。
 
+![image-20250916162428265](1.assets/image-20250916162428265.png)
+
+![image-20250916162524021](1.assets/image-20250916162524021.png)
+
+![image-20250916162600338](1.assets/image-20250916162600338.png)
+
+![image-20250916162634960](1.assets/image-20250916162634960.png)
+
+
+
+### 3.5.1、队列的类型定义
+
+![image-20250916162805066](1.assets/image-20250916162805066.png)
+
+
+
 ### 3.5.2、循环队列——队列的顺序表示和实现
+
+![image-20250916163236414](1.assets/image-20250916163236414.png)
+
+
+
+
+
+
 
 队列也有两种存储表示，顺序表示和链表表示。
 
@@ -1619,7 +1896,7 @@ typedef struct{
 
 单纯的顺序队列有"假溢出"的问题。
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-T4vnyLSJ-1604820044607)(images/image-20201107212721916.png)\]](https://img-blog.csdnimg.cn/2020110815421755.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-T4vnyLSJ-1604820044607)(images/image-20201107212721916.png)\]](1.assets/56456weq.png)
 
 
 尾指针无法插入元素，队列的实际可用空间并未占满，这种现象称为 “假溢出＂
@@ -1629,10 +1906,10 @@ typedef struct{
 - 循环队列解决了“假溢出”(下标溢出)
 - 没有解决真溢出（空间溢出）
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Ui7tb95D-1604820044607)(images/image-20201107211808989.png)\]](https://img-blog.csdnimg.cn/20201108154232893.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Ui7tb95D-1604820044607)(images/image-20201107211808989.png)\]](1.assets/15422.png)
 
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-5JcFZspQ-1604820044608)(images/image-20201107221621840.png)\]](https://img-blog.csdnimg.cn/20201108154246804.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-5JcFZspQ-1604820044608)(images/image-20201107221621840.png)\]](1.assets/05454.png)
 
 
 在这种情况下， 如何区别队满还是队空呢？
@@ -1651,50 +1928,50 @@ typedef struct{
 
 **一、循环队列的初始化**
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-bXB5sXk6-1604820044609)(images/image-20201107222324959.png)\]](https://img-blog.csdnimg.cn/20201108154301968.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-bXB5sXk6-1604820044609)(images/image-20201107222324959.png)\]](1.assets/878.png)
 
 
 **二、循环队列求队列长度**
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-EARXtBwu-1604820044609)(images/image-20201107222403330.png)\]](https://img-blog.csdnimg.cn/20201108154316770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-EARXtBwu-1604820044609)(images/image-20201107222403330.png)\]](1.assets/878978.png)
 
 
 **三、循环队列入队**
 
-![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-UYkLDiIR-1604820044610)(images/image-20201107222431638.png)\]](https://img-blog.csdnimg.cn/20201108154332340.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-UYkLDiIR-1604820044610)(images/image-20201107222431638.png)\]](1.assets/9898656.png)
 
 
 **四、循环队列出队**
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-FMSy2xyQ-1604820044611)(images/image-20201107222508261.png)\]](https://img-blog.csdnimg.cn/20201108154347786.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-FMSy2xyQ-1604820044611)(images/image-20201107222508261.png)\]](1.assets/weqwe.png)
 
 
 **五、循环队列取队头元素**
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Rwr0WPhe-1604820044611)(images/image-20201107222549800.png)\]](https://img-blog.csdnimg.cn/20201108154401881.png#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Rwr0WPhe-1604820044611)(images/image-20201107222549800.png)\]](1.assets/asdsa.png)
 
 
 ### 3.5.3、链队——队列的链式表示和实现
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-GhohPeyX-1604820044612)(images/image-20201107223731320.png)\]](https://img-blog.csdnimg.cn/20201108154418988.png#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-GhohPeyX-1604820044612)(images/image-20201107223731320.png)\]](1.assets/sadas.png)
 
 
 **队列的链式存储结构**
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ictZUjel-1604820044613)(images/image-20201107223744388.png)\]](https://img-blog.csdnimg.cn/20201108154551439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ictZUjel-1604820044613)(images/image-20201107223744388.png)\]](1.assets/asdas.png)
 
 
 **一、链队的初始化**
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-i0UL6G1B-1604820044613)(images/image-20201107224431901.png)\]](https://img-blog.csdnimg.cn/20201108154602999.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-i0UL6G1B-1604820044613)(images/image-20201107224431901.png)\]](1.assets/wqeqwe.png)
 
 
 **二、链队的入队**
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-FPhzzVjl-1604820044614)(images/image-20201107224503504.png)\]](https://img-blog.csdnimg.cn/20201108154615747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-FPhzzVjl-1604820044614)(images/image-20201107224503504.png)\]](1.assets/zsda.png)
 
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-0Q6X0tMP-1604820044615)(images/image-20201107224512678.png)\]](https://img-blog.csdnimg.cn/2020110815463125.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-0Q6X0tMP-1604820044615)(images/image-20201107224512678.png)\]](1.assets/zxdsad.png)
 
 
 **三、链队的出队**
@@ -1711,14 +1988,14 @@ typedef struct{
 
 ⑤、释放原队头元素的空间。
 
-![\图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-roOs11vM-1604820044616)(images/image-20201107224931974.png)\]](https://img-blog.csdnimg.cn/20201108154645727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob25neWFuZ18=,size_16,color_FFFFFF,t_70#pic_center)
+![\图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-roOs11vM-1604820044616)(images/image-20201107224931974.png)\]](1.assets/zxdsadqw.png)
 
 
 需要注意的是，在链队出队操作时还要考虑当队列中最后一个元素被删后，队列尾指针也丢失了，因此需对队尾指针重新赋值（指向头结点）
 
 **四、取链队的队头元素**
 
-![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-z4pLQu0F-1604820044616)(images/image-20201107225129657.png)\]](https://img-blog.csdnimg.cn/20201108154658805.png#pic_center)
+![\ 图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-z4pLQu0F-1604820044616)(images/image-20201107225129657.png)\]](1.assets/saedwq.png)
 
 
 ## 3.6、案例分析与实现
